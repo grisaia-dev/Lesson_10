@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
+set(CMAKE_CXX_COMPILER "clang++")
 
 project(my_first_cmake_project)
 
@@ -19,4 +20,4 @@ add_library(Figures
 
 add_executable(my_first_cmake_program main.cpp)
 
-target_link_libraries(my_first_cmake_program )
+target_link_libraries(my_first_cmake_program Figures)
